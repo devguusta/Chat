@@ -45,6 +45,7 @@ dependencies:
   equatable: ^2.0.3
   google_sign_in_web: ^0.10.1+2
   url_launcher: ^6.1.2
+  firebase_performance: ^0.8.0+13
 
 
 
