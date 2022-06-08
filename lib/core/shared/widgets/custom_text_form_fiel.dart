@@ -6,12 +6,14 @@ class CustomTextFormField extends StatelessWidget {
   final String? label;
   final Widget? prefixIcon;
   final TextEditingController? controller;
+  final Widget? suffixIcon;
   const CustomTextFormField({
     Key? key,
     this.hint,
     this.label,
     this.prefixIcon,
     this.controller,
+    this.suffixIcon,
   }) : super(key: key);
 
   @override
@@ -34,7 +36,7 @@ class CustomTextFormField extends StatelessWidget {
           borderSide: const BorderSide(color: Colors.transparent, width: 0),
         ),
         prefixIcon: prefixIcon,
-        suffixIcon: const Icon(Icons.visibility_off),
+        suffixIcon: suffixIcon,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(24),
           borderSide: const BorderSide(color: Colors.transparent, width: 0),
