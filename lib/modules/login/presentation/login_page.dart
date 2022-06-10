@@ -1,7 +1,9 @@
 import 'package:chat_app/core/shared/widgets/custom_text_form_fiel.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/const/routes.dart';
 import '../../../core/helpers/screen_helpers.dart';
+import '../../../core/shared/widgets/custom_elevated_button.dart';
 import '../../../core/shared/widgets/visible_widget.dart';
 
 class LoginPage extends StatefulWidget {
@@ -47,7 +49,9 @@ class _LoginPageState extends State<LoginPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushNamed(Routes.register);
+                        },
                         child: const Text("Sign up"),
                         style: TextButton.styleFrom(primary: Colors.grey[700]),
                       ),
@@ -60,9 +64,9 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ],
               ),
-              ElevatedButton(
+              CustomElevatedButton(
                 onPressed: () {},
-                child: const Text("Login"),
+                text: "Sign up",
               ),
             ],
           ),
