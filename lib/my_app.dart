@@ -3,6 +3,7 @@ import 'package:chat_app/core/const/routes.dart';
 import 'package:flutter/material.dart';
 
 import 'modules/login/presentation/login_page.dart';
+import 'modules/register/presentation/register_page.dart';
 import 'modules/splash/presentation/splash_page.dart';
 
 class MyApp extends StatelessWidget {
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
         Routes.initial: (context) => const SplashPage(),
         Routes.login: (context) => const LoginPage(),
+        Routes.register: (context) => const RegisterPage(),
       },
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.dark,
