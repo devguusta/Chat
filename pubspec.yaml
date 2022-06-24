@@ -46,6 +46,9 @@ dependencies:
   google_sign_in_web: ^0.10.1+2
   url_launcher: ^6.1.2
   firebase_performance: ^0.8.0+13
+  dartz: ^0.10.1
+  mockito: ^5.2.0
+  build_runner: ^2.1.11
 
 
 
