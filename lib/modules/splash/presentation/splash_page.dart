@@ -9,13 +9,26 @@ class SplashPage extends StatefulWidget {
   State<SplashPage> createState() => _SplashPageState();
 }
 
-class _SplashPageState extends State<SplashPage> {
+class _SplashPageState extends State<SplashPage>
+    with SingleTickerProviderStateMixin {
+  late AnimationController controller;
+  late Animation sizeAnimation;
   @override
   void initState() {
+    super.initState();
+    controller =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    sizeAnimation = TweenSequence([
+      TweenSequenceItem(tween: Tween(begin: 100.0, end: 300.0), weight: 1),
+    ]).animate(controller);
     Future.delayed(const Duration(seconds: 2), () {
       Navigator.of(context).pushReplacementNamed('/login');
     });
-    super.initState();
+
+    controller.addListener(() {
+      setState(() {});
+    });
+    controller.forward();
   }
 
   @override
@@ -31,8 +44,8 @@ class _SplashPageState extends State<SplashPage> {
             ),
             Image.asset(
               'assets/images/splash.png',
-              width: 300,
-              height: 300,
+              width: sizeAnimation.value,
+              height: sizeAnimation.value,
             ),
             const SizedBox(
               height: 20,
