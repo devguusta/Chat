@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String? hint;
@@ -9,6 +10,11 @@ class CustomTextFormField extends StatelessWidget {
   final Widget? suffixIcon;
   final TextInputType? keyboardType;
   final bool obscureText;
+  final VoidCallback? onEditingComplete;
+  final TextInputAction? textInputAction;
+  final List<TextInputFormatter>? inputFormatters;
+  final FocusNode? focusNode;
+
   const CustomTextFormField({
     Key? key,
     this.hint,
@@ -18,6 +24,10 @@ class CustomTextFormField extends StatelessWidget {
     this.suffixIcon,
     this.keyboardType,
     this.obscureText = false,
+    this.onEditingComplete,
+    this.textInputAction,
+    this.inputFormatters,
+    this.focusNode,
   }) : super(key: key);
 
   @override
@@ -27,6 +37,10 @@ class CustomTextFormField extends StatelessWidget {
       keyboardType: keyboardType,
       controller: controller,
       obscureText: obscureText,
+      textInputAction: textInputAction,
+      onEditingComplete: onEditingComplete,
+      inputFormatters: inputFormatters,
+      focusNode: focusNode,
       decoration: InputDecoration(
         fillColor: Colors.grey[300],
         contentPadding:
