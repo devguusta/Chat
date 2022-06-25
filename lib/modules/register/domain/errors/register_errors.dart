@@ -11,7 +11,7 @@ class InvalidParams extends Failure {
 class UserExist extends Failure {
   UserExist({required String errorMessage, required exception})
       : super(
-          errorMessage: 'User already exist',
+          errorMessage: 'User already existu',
           exception: exception,
         );
 }
