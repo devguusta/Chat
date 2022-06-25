@@ -1,4 +1,5 @@
 import 'package:chat_app/modules/register/domain/entities/user_register.dart';
+import 'package:chat_app/modules/register/domain/errors/register_errors.dart';
 import 'package:chat_app/modules/register/domain/repositories/register_repository.dart';
 import 'package:chat_app/modules/register/domain/usecases/user_register_usecase.dart';
 import 'package:dartz/dartz.dart';
@@ -6,7 +7,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
-import '../errors/register_errors.dart';
 import 'user_register_usecase_test.mocks.dart';
 
 @GenerateMocks([RegisterRepository])
